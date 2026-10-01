@@ -12,7 +12,7 @@
   <!-- 访问量与社交徽章 -->
   <p align="center">
     <a href="https://github.com/netbuffer">
-      <img src="https://komarev.com/ghpvc/?username=netbuffer&label=Profile%20Views&color=blue&style=flat-square" alt="Visitor Count" />
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=netbuffer.netbuffer" alt="Visitor Count" />
     </a>
     <a href="https://github.com/netbuffer?tab=repositories&sort=stargazers">
       <img src="https://img.shields.io/github/stars/netbuffer?style=flat-square&logo=github&color=yellow" alt="GitHub Stars" />
