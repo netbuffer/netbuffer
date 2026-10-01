@@ -100,10 +100,20 @@
 ### 🎧 音乐动态 / Listening Now
 
 <div align="center">
-  <!-- Spotify / 音乐动态播放器（支持 Spotify API 或网易云定制） -->
-  <a href="https://open.spotify.com">
-    <img src="https://spotify-github-profile.kittinanx.com/api/run?uid=netbuffer&cover_image=true&bar_color=10B981&bar_color_cover=true" alt="Listening to Spotify" />
+  <!-- 网易云音乐定制黑胶播放卡片 -->
+  <a href="https://music.163.com/#/playlist?id=907049153" target="_blank" rel="noopener noreferrer">
+    <img src="./.github/assets/netease-music.svg" alt="riseopc 喜欢的音乐 - 网易云音乐" width="550" />
   </a>
+
+  <p align="center" style="margin-top: 8px;">
+    <a href="https://music.163.com/#/playlist?id=907049153" target="_blank">
+      <img src="https://img.shields.io/badge/网易云音乐-riseopc喜欢的音乐-C20C0C?style=flat-square&logo=neteasecloudmusic&logoColor=white" alt="NetEase Playlist" />
+    </a>
+    <img src="https://img.shields.io/badge/收录曲目-182首精选-1e293b?style=flat-square&logo=applemusic&logoColor=white" alt="Tracks" />
+    <a href="https://music.163.com/#/user/home?id=583998168" target="_blank">
+      <img src="https://img.shields.io/badge/Creator-riseopc-black?style=flat-square&logo=githubsponsors&logoColor=white" alt="Creator" />
+    </a>
+  </p>
 </div>
 
 ---

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="150" viewBox="0 0 550 150" fill="none">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14171F"/>
+      <stop offset="50%" stop-color="#1A1E29"/>
+      <stop offset="100%" stop-color="#0E1017"/>
+    </linearGradient>
+    <linearGradient id="redBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3A3A"/>
+      <stop offset="100%" stop-color="#C20C0C"/>
+    </linearGradient>
+    <linearGradient id="vinylGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#333742"/>
+      <stop offset="100%" stop-color="#15171C"/>
+    </linearGradient>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #FFFFFF; }
+      .tag { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 600; fill: #FF4D4F; letter-spacing: 0.5px; }
+      .desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; fill: #94A3B8; }
+      .btn-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 600; fill: #FFFFFF; }
+      @keyframes eq1 { 0%, 100% { height: 6px; y: 114px; } 50% { height: 22px; y: 98px; } }
+      @keyframes eq2 { 0%, 100% { height: 18px; y: 102px; } 50% { height: 8px; y: 112px; } }
+      @keyframes eq3 { 0%, 100% { height: 10px; y: 110px; } 50% { height: 26px; y: 94px; } }
+      @keyframes eq4 { 0%, 100% { height: 24px; y: 96px; } 50% { height: 12px; y: 108px; } }
+      @keyframes eq5 { 0%, 100% { height: 14px; y: 106px; } 50% { height: 20px; y: 100px; } }
+      .bar-1 { animation: eq1 1.2s ease-in-out infinite; }
+      .bar-2 { animation: eq2 0.9s ease-in-out infinite; }
+      .bar-3 { animation: eq3 1.4s ease-in-out infinite; }
+      .bar-4 { animation: eq4 1.1s ease-in-out infinite; }
+      .bar-5 { animation: eq5 0.8s ease-in-out infinite; }
+      @keyframes rotateDisc { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      .disc { transform-origin: 75px 75px; animation: rotateDisc 10s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- 卡片边框与背景 -->
+  <rect x="1" y="1" width="548" height="148" rx="16" fill="url(#cardBg)" stroke="#2D3343" stroke-width="1.2"/>
+
+  <!-- 左侧黑胶唱片 -->
+  <g class="disc">
+    <!-- 外黑胶大圆盘 -->
+    <circle cx="75" cy="75" r="48" fill="url(#vinylGlow)" stroke="#474F64" stroke-width="1"/>
+    <!-- 唱片音轨纹理圈 -->
+    <circle cx="75" cy="75" r="41" fill="none" stroke="#252A36" stroke-width="1"/>
+    <circle cx="75" cy="75" r="34" fill="none" stroke="#252A36" stroke-width="1"/>
+    <circle cx="75" cy="75" r="27" fill="none" stroke="#252A36" stroke-width="1"/>
+    <!-- 中心红色标贴 -->
+    <circle cx="75" cy="75" r="18" fill="url(#redBtn)"/>
+    <!-- 唱片中心孔 -->
+    <circle cx="75" cy="75" r="5" fill="#0E1017"/>
+  </g>
+
+  <!-- 中间信息区域 -->
+  <g transform="translate(142, 28)">
+    <!-- 标签与状态圆点 -->
+    <circle cx="4" cy="5" r="3.5" fill="#FF4D4F"/>
+    <text x="14" y="9" class="tag">NETEASE CLOUD MUSIC · 精选歌单</text>
+
+    <!-- 歌单标题 -->
+    <text x="0" y="38" class="title">riseopc 喜欢的音乐</text>
+
+    <!-- 描述与副标题 -->
+    <text x="0" y="62" class="desc">🎵 182 首精选曲目 · 沉浸 Coding 伴奏与灵感之源</text>
+    <text x="0" y="81" class="desc" fill="#64748B">收录《西楼儿女》《春三月》《分飞》等日常私藏</text>
+  </g>
+
+  <!-- 右侧动态音频跳动波形条 -->
+  <g fill="#FF4D4F" opacity="0.85">
+    <rect class="bar-1" x="480" y="106" width="3.5" height="14" rx="1.7"/>
+    <rect class="bar-2" x="487" y="100" width="3.5" height="20" rx="1.7"/>
+    <rect class="bar-3" x="494" y="96" width="3.5" height="24" rx="1.7"/>
+    <rect class="bar-4" x="501" y="102" width="3.5" height="18" rx="1.7"/>
+    <rect class="bar-5" x="508" y="108" width="3.5" height="12" rx="1.7"/>
+  </g>
+
+  <!-- 右下角收听胶囊按钮 -->
+  <g transform="translate(385, 48)">
+    <rect width="130" height="34" rx="17" fill="url(#redBtn)" filter="drop-shadow(0 2px 8px rgba(226, 12, 12, 0.35))"/>
+    <path d="M48 12.5L58 17.5L48 22.5V12.5Z" fill="#FFFFFF"/>
+    <text x="64" y="21.5" class="btn-text">立即收听</text>
+  </g>
+</svg>
