@@ -2,11 +2,11 @@
 
   <!-- 动态打字效果 Header -->
   <a href="https://github.com/netbuffer">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=6366F1&center=true&vCenter=true&width=550&lines=Hi+There!+%F0%9F%91%8B+I'm+netbuffer;Backend+%26+DevOps+Engineer;Java+%2F+Spring+Boot+%26+Cloud+Native;Continuous+Learning+%26+Code+Craftsmanship!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=6366F1&center=true&vCenter=true&width=550&lines=Hi+There!+%F0%9F%91%8B+I'm+netbuffer;AI+Agents+%26+Spring+AI+Practitioner;Backend+%26+DevOps+Engineer;Java+%2F+Cloud+Native+Architect;Continuous+Learning+%26+Code+Craftsmanship!" alt="Typing SVG" />
   </a>
 
   <p align="center">
-    🚀 <b>探索高可用架构与云原生技术 | 专注后端工程与自动化 DevOps 实践</b>
+    🤖 <b>探索 AI 智能体与 Spring AI 前沿应用 | 专注后端工程与自动化 DevOps 实践</b>
   </p>
 
   <!-- 访问量与社交徽章 -->
@@ -27,15 +27,25 @@
 
 ### 👨‍💻 关于我 / About Me
 
-- 🔭 **技术方向**：后端分布式系统架构、云原生（Cloud Native）、DevOps 持续交付
-- ☕ **核心技术栈**：深度沉淀于 **Java / Spring Boot** 生态，涉猎 **Go**、**Python** 与现代 Web 体系
+- 🤖 **AI 探索与落地**：聚焦 **AI 智能体（AI Agents）** 开发、多智能体协同架构，基于 **Spring AI** 与主流 LLM 构建落地应用
+- 🔭 **技术方向**：后端分布式系统架构、云原生（Cloud Native）、DevOps 持续交付体系
+- ☕ **核心技术栈**：深度沉淀于 **Java / Spring Boot / Spring AI** 生态，涉猎 **Go**、**Python** 与现代 Web 体系
 - ⚡ **工程理念**：自动化优先、高内聚低耦合、追求整洁代码与系统可观测性
-- 💬 **欢迎交流**：分布式架构设计、微服务治理、容器化部署、网络协议与中间件优化
+- 💬 **欢迎交流**：AI Agents 编排、Spring AI 框架实践、微服务治理、容器化运维与性能调优
 - 📫 **联系方式**：可以通过 GitHub Issue、PR 或主页联系我
 
 ---
 
 ### 🛠️ 技能清单 / Tech Stack
+
+#### 🤖 人工智能 & 智能体 / AI & AI Agents
+<p>
+  <img src="https://img.shields.io/badge/Spring_AI-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring AI" />
+  <img src="https://img.shields.io/badge/AI_Agents-FF6F00?style=for-the-badge&logo=openai&logoColor=white" alt="AI Agents" />
+  <img src="https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI API" />
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama" />
+  <img src="https://img.shields.io/badge/Prompt_Engineering-3B82F6?style=for-the-badge&logo=anthropic&logoColor=white" alt="Prompt Engineering" />
+</p>
 
 #### 💻 编程语言 & 后端核心
 <p>
