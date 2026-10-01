@@ -1,0 +1,100 @@
+name: Update Guestbook
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update-guestbook:
+    if: contains(github.event.issue.title, 'Guestbook') || contains(github.event.issue.labels.*.name, 'guestbook')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Update README with guestbook entry
+        env:
+          USER_LOGIN: ${{ github.event.issue.user.login }}
+          USER_AVATAR: ${{ github.event.issue.user.avatar_url }}
+          USER_URL: ${{ github.event.issue.user.html_url }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python - << 'EOF'
+          import os, re, html
+          from datetime import datetime
+
+          user = os.environ.get('USER_LOGIN', 'Anonymous')
+          avatar = os.environ.get('USER_AVATAR', '')
+          user_url = os.environ.get('USER_URL', f'https://github.com/{user}')
+          raw_body = os.environ.get('ISSUE_BODY', '')
+
+          # Clean and sanitize message (remove markdown injections, single line)
+          clean_msg = html.escape(raw_body.strip()).replace('\n', ' ').replace('|', '&#124;')
+          if not clean_msg:
+              clean_msg = "👋 Left a friendly hello!"
+          if len(clean_msg) > 200:
+              clean_msg = clean_msg[:197] + '...'
+
+          date_str = datetime.utcnow().strftime('%Y-%m-%d')
+          new_entry = f"| <a href=\"{user_url}\"><img src=\"{avatar}&s=40\" width=\"32\" height=\"32\" style=\"border-radius:50%;\" alt=\"{user}\"/></a> | **[{user}]({user_url})** | {clean_msg} | `{date_str}` |"
+
+          readme_path = 'README.md'
+          with open(readme_path, 'r', encoding='utf-8') as f:
+              content = f.read()
+
+          start_marker = "<!-- GUESTBOOK_START -->"
+          end_marker = "<!-- GUESTBOOK_END -->"
+
+          pattern = re.compile(rf"({re.escape(start_marker)})(.*?)({re.escape(end_marker)})", re.DOTALL)
+          match = pattern.search(content)
+
+          if match:
+              existing_block = match.group(2).strip()
+              table_header = "| 访客 | 用户 | 留言内容 | 日期 |\n| :---: | :--- | :--- | :---: |"
+              
+              lines = [line.strip() for line in existing_block.split('\n') if line.strip() and not line.startswith('| 访客') and not line.startswith('| :---')]
+              # Keep up to 10 latest entries
+              all_entries = [new_entry] + lines[:9]
+              updated_table = table_header + "\n" + "\n".join(all_entries)
+
+              new_content = pattern.sub(rf"\1\n\n{updated_table}\n\n\3", content)
+              with open(readme_path, 'w', encoding='utf-8') as f:
+                  f.write(new_content)
+              print("README updated successfully with new guestbook entry.")
+          else:
+              print("Markers not found in README.md")
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(guestbook): new entry from @${{ github.event.issue.user.login }}" && git push)
+
+      - name: Close and comment on issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `🎉 嗨 @${context.payload.issue.user.login}，你的留言已经同步到个人主页的访客留言板啦！感谢你的留言与支持！🌟`
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });

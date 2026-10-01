@@ -97,6 +97,37 @@
 
 ---
 
+### 🎧 音乐动态 / Listening Now
+
+<div align="center">
+  <!-- Spotify / 音乐动态播放器（支持 Spotify API 或网易云定制） -->
+  <a href="https://open.spotify.com">
+    <img src="https://spotify-github-profile.kittinanx.com/api/run?uid=netbuffer&cover_image=true&bar_color=10B981&bar_color_cover=true" alt="Listening to Spotify" />
+  </a>
+</div>
+
+---
+
+### 📖 访客留言板 / Guestbook
+
+欢迎留下你的足迹！点击下方按钮提交一条 Issue 即可**自动上墙**：
+
+<div align="center">
+  <a href="https://github.com/netbuffer/netbuffer/issues/new?title=Guestbook+Entry&labels=guestbook&body=%E5%9C%A8%E6%AD%A4%E5%A4%84%E5%86%99%E4%B8%8B%E4%BD%A0%E7%9A%84%E7%95%99%E8%A8%80%EF%BC%88%E6%94%AF%E6%8C%81Emoji%EF%BC%89">
+    <img src="https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F_%E7%AD%BE%E5%88%B0%E7%95%99%E8%A8%80-Click_to_Sign_Guestbook-6366F1?style=for-the-badge&logo=github&logoColor=white" alt="Sign Guestbook" />
+  </a>
+</div>
+
+<br/>
+
+<!-- GUESTBOOK_START -->
+| 访客 | 用户 | 留言内容 | 日期 |
+| :---: | :--- | :--- | :---: |
+| <a href="https://github.com/netbuffer"><img src="https://github.com/netbuffer.png?size=40" width="32" height="32" style="border-radius:50%;" alt="netbuffer"/></a> | **[netbuffer](https://github.com/netbuffer)** | 👋 欢迎来到我的 GitHub 主页！欢迎随时交流与留下足迹～ | `2026-10-01` |
+<!-- GUESTBOOK_END -->
+
+---
+
 <div align="center">
   <i>💡 "Talk is cheap. Show me the code." — Linus Torvalds</i>
 </div>
